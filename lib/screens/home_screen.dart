@@ -21,6 +21,12 @@ class MyHomePage extends StatelessWidget {
               'You have pushed the button this many times: ${context.watch<Counter>().count}',
             ),
             Count(),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/second');
+              },
+              child: Text('Second Screen'),
+            )
           ],
         ),
       ),
