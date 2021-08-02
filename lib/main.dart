@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => MyHomePage(),
+        'second/': (context) => SecondPage(),
       },
     );
   }
