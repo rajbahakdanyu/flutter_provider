@@ -20,6 +20,7 @@ class MyHomePage extends StatelessWidget {
             Text(
               'You have pushed the button this many times: ${context.watch<Counter>().count}',
             ),
+            Count(),
           ],
         ),
       ),
@@ -52,6 +53,19 @@ class MyHomePage extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class Count extends StatelessWidget {
+  const Count({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      '${context.watch<Counter>().count}',
+      key: Key('counterState'),
+      style: Theme.of(context).textTheme.headline4,
     );
   }
 }
